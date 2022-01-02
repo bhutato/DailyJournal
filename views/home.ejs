@@ -1,8 +1,21 @@
 <%- include('partials/header'); -%>
 
-<h1>Home</h1>
+<section id="top-section">
+    <div class="row">
+        <div class= "col-lg-6" "top">
+            <h1 class="big-heading">Welcome</h1>
+            <h1 class="big-heading"> to journal</h1>
+        
+            <p class="small-heading"><%= homeStartingContent %></p>
+        </div>
+        
+        <div class= "col-lg-6">
+            <img class="image" src="/images/img1.jpeg" >
+        </div>
+    </div>
+    
+</section>
 
-<p><%= homeStartingContent %></p>
 
 <% posts.forEach(function (post) { %>
     <h1> <%= post.title %> </h1>
