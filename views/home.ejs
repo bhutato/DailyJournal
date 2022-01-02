@@ -4,12 +4,10 @@
 
 <p><%= homeStartingContent %></p>
 
-<% console.log(posts) %> 
-
-<% posts.forEach(function (item) { %>
-    <h1> <%= item.title %> </h1>
-    <p> <%= item.body.substring(0,100) + "..." %> 
-        <a href="/blogs/ + <%=item.title%> " >Read more</a> 
+<% posts.forEach(function (post) { %>
+    <h1> <%= post.title %> </h1>
+    <p> <%= post.content.substring(0,100) + "..." %> 
+        <a href="/posts/<%=post._id%>" >Read more</a> 
     </p> 
 <% }) %> 
 
