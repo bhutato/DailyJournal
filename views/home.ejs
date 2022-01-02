@@ -1,28 +1,41 @@
 <%- include('partials/header'); -%>
 
-<section id="top-section">
+<div class="main">
+
+
+<div class="top-container">
     <div class="row">
-        <div class= "col-lg-6" "top">
-            <h1 class="big-heading">Welcome</h1>
-            <h1 class="big-heading"> to journal</h1>
         
-            <p class="small-heading"><%= homeStartingContent %></p>
+        <div class="top-content">
+            <div class= "col-lg-6">
+                <h1 class="big-heading">Welcome </h1> 
+                <h1 class="big-heading">to journal </h1>
+
+                <p class="title-para"><%= homeStartingContent %></p>
+            </div>
         </div>
-        
-        <div class= "col-lg-6">
-            <img class="image" src="/images/img1.jpeg" >
-        </div>
+            
+            <div class= "col-lg-6">
+                <img class="image" src="/images/img1.jpeg" >
+            </div>
     </div>
+</div>
     
-</section>
 
 
-<% posts.forEach(function (post) { %>
-    <h1> <%= post.title %> </h1>
-    <p> <%= post.content.substring(0,100) + "..." %> 
-        <a href="/posts/<%=post._id%>" >Read more</a> 
-    </p> 
-<% }) %> 
+<div id="#posts" class="post-container">
+    <% posts.forEach(function (post) { %>
+        <div class="post-padding">
+            <h1> <%= post.title %> </h1>
+            <p class= "post-para"> <%= post.content.substring(0,100) + "..." %> 
+            <a href="/posts/<%=post._id%>" >Read more</a> 
+        </p> 
+        </div>
+        
+    <% }) %> 
+</div>
+
+</div>
 
 
 
