@@ -41,10 +41,6 @@ app.get("/about", function (req, res) {
   res.render("about", { aboutContent: aboutContent });
 });
 
-// app.get("/contact", function (req, res) {
-//   res.render("contact", { contactContent: contactContent });
-// });
-
 app.get("/compose", function (req, res) {
   res.render("compose");
 });
@@ -62,8 +58,10 @@ app.get("/posts/:postId", function(req,res){
 })
 
 app.post("/compose", function (req, res) {
+  const homePostTitle = _.capitalize(req.body.titleText);
+  const formatTitle = _.startCase(homePostTitle);
   const post = new Post({
-    title: _.capitalize(req.body.titleText),
+    title: formatTitle,
     content: req.body.composeText
   });
 
