@@ -121,4 +121,11 @@ nav .navbar-nav li a{
     padding: 2.5rem;
 }
 
+.git-icon{
+    font-size: 3.5rem;
+    color: #2f3136;
+}
 
+.git-icon:hover{
+    color: #8b7ce9 ;
+}
