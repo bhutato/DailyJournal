@@ -5,7 +5,7 @@ const ejs = require("ejs");
 const _ = require("lodash");
 const { lowerCase } = require("lodash");
 const mongoose = require("mongoose");
-const {clusterURL} = require("/config.json");
+const {clusterURL} = require("/config/config.json");
 
 mongoose.connect(clusterURL);
 
