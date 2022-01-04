@@ -7,7 +7,6 @@ const { lowerCase } = require("lodash");
 const mongoose = require("mongoose");
 const {clusterURL} = require("/config.json");
 
-// mongoose.connect("mongodb://localhost:27017/journalDB");
 mongoose.connect(clusterURL);
 
 const homeStartingContent =
@@ -75,6 +74,11 @@ app.post("/compose", function (req, res) {
 
 });
 
-app.listen(process.env.PORT||8080, function () {
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 8080;
+}
+
+app.listen(port, function () {
   console.log("Server started on port 8080");
 });
