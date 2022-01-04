@@ -5,9 +5,9 @@ const ejs = require("ejs");
 const _ = require("lodash");
 const { lowerCase } = require("lodash");
 const mongoose = require("mongoose");
-const {clusterURL} = require("/config/config.json");
+const {clusterURL, localURL} = require("./public/config.json");
 
-mongoose.connect(clusterURL);
+mongoose.connect(localURL);
 
 const homeStartingContent =
   "All your posts appear here.";
@@ -80,5 +80,5 @@ if (port == null || port == "") {
 }
 
 app.listen(port, function () {
-  console.log("Server started on port 8080");
+  console.log("Server started on port " + port);
 });
