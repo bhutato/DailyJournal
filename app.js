@@ -7,7 +7,8 @@ const { lowerCase } = require("lodash");
 const mongoose = require("mongoose");
 const {clusterURL} = require("/config.json");
 
-mongoose.connect("mongodb://localhost:27017/journalDB");
+// mongoose.connect("mongodb://localhost:27017/journalDB");
+mongoose.connect(clusterURL);
 
 const homeStartingContent =
   "All your posts appear here.";
