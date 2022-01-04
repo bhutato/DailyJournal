@@ -22,22 +22,19 @@
 </div>
     
 
+    <div id="posts-c" class="post-container">
+        <% posts.forEach(function (post) { %>
+            <div class="post-padding">
+                <h1> <%= post.title %> </h1>
+                <p class= "post-para"> <%= post.content.substring(0,100) + "..." %> 
+                <a href="/posts/<%=post._id%>" >Read more</a> 
+            </p> 
+            </div>
+            
+        <% }) %> 
+    </div>
 
-<div id="#posts" class="post-container">
-    <% posts.forEach(function (post) { %>
-        <div class="post-padding">
-            <h1> <%= post.title %> </h1>
-            <p class= "post-para"> <%= post.content.substring(0,100) + "..." %> 
-            <a href="/posts/<%=post._id%>" >Read more</a> 
-        </p> 
-        </div>
-        
-    <% }) %> 
 </div>
-
-</div>
-
-
 
 
 <%- include('partials/footer'); -%>
