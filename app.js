@@ -5,9 +5,9 @@ const ejs = require("ejs");
 const _ = require("lodash");
 const { lowerCase } = require("lodash");
 const mongoose = require("mongoose");
-const {clusterURL, localURL} = require("./public/config.json");
+require('dotenv').config();
 
-mongoose.connect(localURL);
+mongoose.connect(process.env.CLUSTER_URL);
 
 const homeStartingContent =
   "All your posts appear here.";
