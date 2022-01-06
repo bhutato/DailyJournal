@@ -6,17 +6,19 @@
   <form action="/compose" method="POST">
     <div class="form-group">
       <label>Title</label>
-      <input class="form-control" type="text" name="titleText" autocomplete="off" />
+      <input class="form-control" type="text" name="titleText" autocomplete="off" maxlength="70" required />
     </div>
+
   
     <div class="form-group">
       <label>Post</label>
-      <textarea class="form-control" name="composeText" rows="5"></textarea>
+      <textarea class="form-control" name="composeText" rows="5" required></textarea>
     </div>
   
     <button type="submit" class="btn btn-success" name="publishButton">
       Publish
     </button>
+
   </form>
 </div>
 
